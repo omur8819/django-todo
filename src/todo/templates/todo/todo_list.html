@@ -2,10 +2,13 @@
 
 
 {% block content %}
-<ul>
-    {% for todo in todos %}
-    <li>{{ todo }}</li>
-    {% endfor %}
-</ul>
+<div class="">
+    <h3>Todo List</h3>
+    <ul>
+        {% for todo in todos %}
+        <li>{{ todo }}</li>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock content %}
     
