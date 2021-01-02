@@ -6,7 +6,13 @@
     <h3>Todo List</h3>
     <ul>
         {% for todo in todos %}
-        <li>{{ todo }}</li>
+        <a href="{% url 'todo-update' todo.id %}">
+            {% if todo.completed %}
+                <li><del>{{ todo }}</del></li> 
+            {% else %}
+                <li>{{ todo }}</li>
+                {% endif %}
+        </a>
         {% endfor %}
     </ul>
 </div>
